@@ -7,8 +7,9 @@ body {
 }
 
 @layer components {
+  /* Navbar */
   .navbar {
-    @apply bg-white border-b shadow-sm fixed z-50 w-full justify-between py-5 px-28 items-center;
+    @apply bg-white border-b shadow-sm fixed z-50 w-full justify-between py-5 px-28 items-center font-normal;
   }
 
   .navbar li {
@@ -18,5 +19,9 @@ body {
   .navbar li+li::before {
     content: "";
     padding: 1rem;
+  }
+
+  .button-lg {
+    @apply bg-vedoc-yellow h-14 w-64 flex justify-center items-center rounded-lg border border-gray-500 shadow-md text-vedoc-black text-xl leading-7;
   }
 }

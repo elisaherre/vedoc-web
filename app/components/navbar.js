@@ -34,6 +34,7 @@ export default function navbar() {
             </li>
           </ul>
         </nav>
+        <Link href="#" className='button-lg'>Download App</Link>
       </div>
     </header>
   )

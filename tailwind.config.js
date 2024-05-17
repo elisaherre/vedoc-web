@@ -7,6 +7,10 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        "vedoc-yellow": "#FFE473",
+        "vedoc-black": "#181818",
+      }
     },
   },
   plugins: [],
