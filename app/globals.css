@@ -9,11 +9,11 @@ body {
 @layer components {
   /* Navbar */
   .navbar {
-    @apply bg-white border-b shadow-sm fixed z-50 w-full justify-between py-5 px-28 items-center font-normal;
+    @apply bg-white border-b shadow-sm fixed z-50 w-full justify-between px-6 py-4 xl:px-28 items-center font-normal;
   }
 
   .navbar li {
-    @apply text-lg text-gray-500
+    @apply hidden text-lg text-gray-500 xl:block;
   }
 
   .navbar li+li::before {
@@ -22,6 +22,12 @@ body {
   }
 
   .button-lg {
-    @apply bg-vedoc-yellow h-14 w-64 flex justify-center items-center rounded-lg border border-gray-500 shadow-md text-vedoc-black text-xl leading-7;
+    @apply hidden bg-vedoc-yellow h-14 w-64 xl:flex justify-center items-center rounded-lg
+    border border-gray-500 shadow-md text-vedoc-black text-xl leading-7
+    ;
+  }
+
+  .burguer-menu {
+    @apply xl:hidden
   }
 }
