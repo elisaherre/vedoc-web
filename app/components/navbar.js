@@ -2,15 +2,16 @@ import '../globals.css'
 import Image from 'next/image'
 import Link from 'next/link'
 
-export default function navbar() {
+export default function Navbar() {
   return (
     <header>
       <div className='flex navbar'>
         <Image
-          src='/images/vedoc-logo.png'
+          src='/images/vedoc_logo.png'
           alt='Vedoc Logo'
           width={100}
           height={70}
+          quality={100}
         />
         <nav>
           <ul className='flex'>
@@ -34,6 +35,15 @@ export default function navbar() {
             </li>
           </ul>
         </nav>
+        <Link href="#" className='button-lg'>Download App</Link>
+        <Link href="#" className='burguer-menu'>
+          <Image
+            src='/images/menu.png'
+            alt='Menu'
+            width={30}
+            height={30}
+          />
+        </Link>
       </div>
     </header>
   )
