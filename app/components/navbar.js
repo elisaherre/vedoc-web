@@ -2,7 +2,7 @@ import '../globals.css'
 import Image from 'next/image'
 import Link from 'next/link'
 
-export default function navbar() {
+export default function Navbar() {
   return (
     <header>
       <div className='flex navbar'>
