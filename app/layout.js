@@ -4,6 +4,7 @@ import "./globals.css";
 //Components
 import Navbar from "./components/navbar";
 import Footer from "./components/footer";
+import Ad from "./components/ad";
 
 const OpenSans = Open_Sans({ subsets: ["latin"] });
 
@@ -17,6 +18,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={OpenSans.className}>
         <Navbar />
+        <Ad />
         <Footer />
         {children}
       </body>
