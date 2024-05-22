@@ -19,9 +19,10 @@ export default function RootLayout({ children }) {
       <body className={OpenSans.className}>
         <Navbar />
         {children}
-        {/* <Ad /> */}
+        <Ad />
         <Footer />
       </body>
+      {/* <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"/> */}
     </html>
   );
 }
