@@ -24,7 +24,7 @@ export default function Footer () {
             quality={100}
             className='pr-2'
             />
-            <p>info@vedocapp.com</p>
+            <p className='text-sm'>info@vedocapp.com</p>
           </div>
           <ul className='flex items-center pt-5 justify-between'>
             <li><Link href="https://www.linkedin.com/company/vedoc-app"><Image src='/images/icon_linkedin.png' alt='LinkedIn' width={35} height={35} quality={100} className='icon'/></Link></li>
@@ -34,11 +34,16 @@ export default function Footer () {
           </ul>
         </div>
         <div class='flex flex-col w-1/3 justify-center'>
-          <p>Subscribe to Vedoc&apos;s Newsletter for new features updates and articles delivered right to your inbox.</p>
+          <p className='pb-5 text-sm'>Subscribe to Vedoc&apos;s Newsletter for new features updates and articles delivered right to your inbox.</p>
+          <form class="max-w-sm relative">
+            <input type="email" id="email" class="shadow bg-white border border-gray-400 text-gray-700 text-sm rounded-lg focus:ring-vedoc-yellow focus:border-vedoc-yellow block w-full p-5" placeholder="Email address" required/>
+            <button type="submit" class="absolute right-2 top-1/2 transform -translate-y-1/2 text-vedoc-black bg-vedoc-yellow hover:bg-vedoc-yellow-hover focus:ring-4 focus:outline-none focus:ring-gray-300 rounded-lg text-sm px-5 py-2 text-center border border-gray-300">Subscribe</button>
+          </form>
+
         </div>
       </div>
       <div className='flex pb-10 pt-14 w-full'>
-        <ul className='vedoc-footer flex text-sm text-vedoc-black'>
+        <ul className='vedoc-footer flex text-sm text-vedoc-black font-light'>
           <li>© 2024 Vedoc. All rights reserved.</li>
           <li><Link href="#" className='underline'>Terms & Conditions</Link></li>
           <li><Link href="#" className='underline'>Privacy Policy</Link></li>
