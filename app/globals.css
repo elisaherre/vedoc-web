@@ -4,10 +4,6 @@
 @tailwind components;
 @tailwind utilities;
 
-main {
-  @apply fixed top-28;
-}
-
 @layer components {
   /* Navbar */
   .navbar {
@@ -24,13 +20,21 @@ main {
   }
 
   .button-lg {
-    @apply hidden bg-vedoc-yellow h-14 w-64 xl:flex justify-center items-center rounded-lg
+    @apply hidden bg-vedoc-yellow hover:bg-vedoc-ad-yellow h-14 w-64 xl:flex justify-center items-center rounded-lg
     border border-gray-500 shadow-md text-vedoc-black text-xl leading-7
     ;
   }
 
   .burguer-menu {
     @apply xl:hidden
+  }
+
+  /* Hero */
+
+  .hero-image {
+    @apply bg-contain bg-no-repeat bg-center h-screen;
+    background-image: url('/images/hero.png');
+    width: 80%;
   }
 
   /* Ad */
