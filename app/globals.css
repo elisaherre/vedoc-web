@@ -4,14 +4,14 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  /* @apply bg-indigo-200; */
+main {
+  @apply fixed top-28;
 }
 
 @layer components {
   /* Navbar */
   .navbar {
-    @apply bg-white border-b shadow-sm fixed z-50 w-full justify-between px-6 py-4 xl:px-28 items-center font-normal;
+    @apply bg-white border-b shadow-sm fixed w-full justify-between px-6 py-4 xl:px-28 items-center font-normal z-50;
   }
 
   .navbar li {
@@ -35,12 +35,18 @@ body {
 
   /* Ad */
   .ad-section {
-    @apply w-full lg:flex fixed top-20 bg-vedoc-ad-yellow shadow xl:h-auto h-fit;
+    @apply w-full lg:flex bg-vedoc-ad-yellow shadow xl:h-auto h-fit;
   }
 
   .phones {
     @apply bg-cover lg:bg-contain xl:bg-cover bg-no-repeat bg-top overflow-y-hidden;
     background-image: url('/images/ad_app.png');
     width: 524px;
+  }
+
+  /* Footer */
+  .vedoc-footer li+li::before {
+    content: "";
+    padding: 1rem;
   }
 }

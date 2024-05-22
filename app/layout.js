@@ -18,9 +18,11 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={OpenSans.className}>
         <Navbar />
+        <main>
+        {children}
         <Ad />
         <Footer />
-        {children}
+        </main>
       </body>
     </html>
   );
