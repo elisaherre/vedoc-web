@@ -4,12 +4,12 @@ import Link from 'next/link'
 
 export default function Ad() {
   return (
-    <div className='ad-section'>
-      <div className='flex flex-col w-2/3 py-16 pl-20'>
-        <h3 className='font-roboto text-5xl uppercase font-medium pb-6'>
+    <div className='ad-section pt-24 lg:px-24'>
+      <div className='flex flex-col w-full lg:w-3/5 lg:pb-24 lg:pr-10'>
+        <h3 className='font-roboto text-5xl uppercase font-medium pb-7'>
           Empowering Auto Experts and Car Owners with Vedoc
         </h3>
-        <p className='text-base leading-7 font-normal w-3/4 pb-4'>Vedoc revolutionizes car care for both mechanics and users. Mechanics, amplify your business with Vedoc&apos;s tailored platform. Users, dive into a new era of automotive convenience. Download Vedoc now.</p>
+        <p className='leading-7 font-light text-xl w-5/6 pb-7'>Vedoc revolutionizes car care for both mechanics and users. Mechanics, amplify your business with Vedoc&apos;s tailored platform. Users, dive into a new era of automotive convenience. Download Vedoc now.</p>
         <div className='flex'>
           <Link href="#" className=''>
           <Image
@@ -33,15 +33,9 @@ export default function Ad() {
           </Link>
         </div>
       </div>
-      <div className='flex relative justify-end overflow-hidden'>
-        <Image
-            src='/images/ad_app.png'
-            alt='Vedoc Ad'
-            width={500}
-            height={650}
-            quality={100}
-            className='relative -bottom-32'
-          />
+      <div className='flex relative'>
+        <div className='phones'>
+        </div>
       </div>
     </div>
   )

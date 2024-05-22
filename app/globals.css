@@ -35,7 +35,12 @@ body {
 
   /* Ad */
   .ad-section {
-    @apply w-full lg:flex fixed top-40 bg-vedoc-ad-yellow shadow;
-    height: 30rem;
+    @apply w-full lg:flex fixed top-20 bg-vedoc-ad-yellow shadow xl:h-auto h-fit;
+  }
+
+  .phones {
+    @apply bg-cover lg:bg-contain xl:bg-cover bg-no-repeat bg-top overflow-y-hidden;
+    background-image: url('/images/ad_app.png');
+    width: 524px;
   }
 }
