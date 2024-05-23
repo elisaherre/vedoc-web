@@ -22,7 +22,9 @@
 
   .button-lg {
     @apply hidden bg-vedoc-yellow hover:bg-vedoc-ad-yellow h-14 w-64 xl:flex justify-center items-center rounded-lg
-    border border-gray-500 shadow-md text-vedoc-black text-xl leading-7
+    border border-gray-500 shadow-md text-vedoc-black text-xl leading-7;
+    transition-property: background-color;
+    transition-duration: 0.3s;
     ;
   }
 
@@ -45,6 +47,12 @@
   .vedoc-footer li+li::before {
     content: "";
     padding: 1rem;
+  }
+
+  .button-vedoc {
+    @apply absolute right-2 top-1/2 transform -translate-y-1/2 text-vedoc-black bg-vedoc-yellow hover:bg-vedoc-ad-yellow focus:ring-4 focus:outline-none focus:ring-gray-300 rounded-lg text-sm px-5 py-2 text-center border border-gray-300;
+    transition-property: background-color;
+    transition-duration: 0.3s;
   }
 
   /* Home */
