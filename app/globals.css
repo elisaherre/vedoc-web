@@ -34,7 +34,7 @@
 
   /* Ad */
   .ad-section {
-    @apply w-full lg:flex bg-vedoc-ad-yellow shadow xl:h-auto h-fit;
+    @apply w-full lg:flex bg-vedoc-ad-yellow shadow xl:h-auto h-fit pt-24 lg:px-24;
   }
 
   .phones {
@@ -59,19 +59,19 @@
   /* Hero */
 
   .hero-image {
-    @apply bg-contain bg-no-repeat bg-center h-screen;
+    @apply bg-contain bg-no-repeat bg-center h-screen my-10;
     background-image: url('/images/hero.png');
-    width: 80%;
+    width: 75%;
   }
 
   /* Benefits Section */
 
   .benefit-card {
-    @apply w-1/2 flex items-start p-6;
+    @apply w-1/2 flex items-start p-2;
   }
 
   .benefit-card-info {
-    @apply pl-6;
+    @apply pl-4;
   }
 
   .benefit-card-info h5 {
@@ -84,5 +84,29 @@
 
   .benefit-icon {
     @apply border border-black rounded-full;
+  }
+
+  /* How It Works Section */
+  .how-it-works-card {
+    @apply bg-vedoc-light-yellow bg-opacity-40 rounded-lg p-10 shadow leading-8 hover:bg-opacity-100 hover:bg-vedoc-ad-yellow duration-700 my-6;
+    width: 560px;
+    height: 400px;
+  }
+
+  .num {
+    @apply font-roboto font-medium text-2xl text-vedoc-yellow bg-vedoc-black w-12 h-12 rounded-full flex items-center justify-center;
+  }
+
+  .how-it-works-card h4 {
+    @apply font-roboto font-bold text-2xl text-vedoc-black pt-8 pb-5;
+  }
+
+  /* Testimonials Section */
+  .testimonial-card {
+    @apply p-5 w-1/3 h-72 text-sm leading-8;
+  }
+
+  .testimonial-card h5 {
+    @apply font-roboto font-semibold text-2xl text-vedoc-black py-2;
   }
 }

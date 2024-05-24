@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 export default function Ad() {
   return (
-    <div className='ad-section pt-24 lg:px-24'>
+    <div className='ad-section'>
       <div className='flex flex-col w-full lg:w-3/5 lg:pb-24 lg:pr-10'>
         <h3 className='font-roboto text-5xl uppercase font-medium pb-7'>
           Empowering Auto Experts and Car Owners with Vedoc
