@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 export default function Footer () {
   return (
-    <footer className='flex flex-col fixed left-0 bottom-0 w-full items-cente px-24 bg-white'>
+    <footer className='flex flex-col w-full items-center px-24 bg-white'>
       <div className='flex justify-between w-full border-b py-14'>
         <div>
           <Image
@@ -37,7 +37,7 @@ export default function Footer () {
           <p className='pb-5 text-sm'>Subscribe to Vedoc&apos;s Newsletter for new features updates and articles delivered right to your inbox.</p>
           <form class="max-w-sm relative">
             <input type="email" id="email" class="shadow bg-white border border-gray-400 text-gray-700 text-sm rounded-lg focus:ring-vedoc-yellow focus:border-vedoc-yellow block w-full p-5" placeholder="Email address" required/>
-            <button type="submit" class="absolute right-2 top-1/2 transform -translate-y-1/2 text-vedoc-black bg-vedoc-yellow hover:bg-vedoc-yellow-hover focus:ring-4 focus:outline-none focus:ring-gray-300 rounded-lg text-sm px-5 py-2 text-center border border-gray-300">Subscribe</button>
+            <button type="submit" class="button-vedoc">Subscribe</button>
           </form>
 
         </div>
