@@ -5,10 +5,14 @@
 @tailwind utilities;
 
 @layer components {
+  html {
+    @apply sm:max-md:w-full;
+  }
+
   /* Layout */
   /* Navbar */
   .navbar {
-    @apply bg-white border-b shadow-sm fixed w-full justify-between px-6 py-4 xl:px-28 items-center font-normal z-50;
+    @apply bg-white border-b shadow-sm fixed w-screen justify-between px-6 py-4 xl:px-28 items-center font-normal z-50;
   }
 
   .navbar li {
@@ -59,10 +63,19 @@
   /* Hero */
 
   .hero-image {
-    @apply bg-contain bg-no-repeat bg-center h-screen my-10;
+    @apply bg-cover lg:bg-contain bg-no-repeat bg-center h-64 lg:h-screen my-6 lg:my-10 w-full lg:w-3/4 bg-clip-content;
     background-image: url('/images/hero.png');
-    width: 75%;
   }
+
+  .app-store-icon {
+    @apply bg-cover bg-no-repeat bg-center h-12 w-36;
+    background-image: url('/images/app_store.png');
+  };
+
+  .google-play-icon {
+    @apply bg-cover bg-no-repeat bg-center h-12 w-40;
+    background-image: url('/images/google_play.png');
+  };
 
   /* Benefits Section */
 

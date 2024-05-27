@@ -23,39 +23,21 @@ export default function Home() {
 
   return (
     <div>
-      <div className="flex flex-col w-full justify-center items-center bg-white px-24 pt-40">
-        <h2 className='text-6xl font-bold uppercase font-roboto' id="text-carousel">
+      <div className="flex flex-col w-full justify-center items-center bg-white px-6 lg:px-24 pt-40">
+        <h2 className='text-xl md:text-4xl lg:text-6xl font-bold uppercase font-roboto text-center' id="text-carousel">
           {texts[currentText]}
         </h2>
-        <p className='py-6 text-xl leading-8'>Start now, connect with trusted auto pros or list your shop with Vedoc today!</p>
-        <div className='flex'>
-          <Link href="#" className=''>
-            <Image
-              src='/images/app_store.png'
-              alt='Download on App Store'
-              width={100}
-              height={100}
-              quality={100}
-              className='h-14 w-auto pr-4'
-            />
-          </Link>
-          <Link href="#" className=''>
-            <Image
-              src='/images/google_play.png'
-              alt='Download on Google Play'
-              width={100}
-              height={100}
-              quality={100}
-              className='h-14 w-auto'
-            />
-          </Link>
+        <p className='py-6 text-sm lg:text-xl leading-8 text-center'>Start now, connect with trusted auto pros or list your shop with Vedoc today!</p>
+        <div className='flex justify-between gap-2'>
+          <Link href="#" className=''><div className='app-store-icon'></div></Link>
+          <Link href="#" className=''><div className='google-play-icon'></div></Link>
         </div>
         <div className='hero-image'></div>
       </div>
       <section>
         <div className='flex flex-col items-center px-24 pb-20'>
-          <h3 className='text-lg font-semibold leading-8'>Benefits</h3>
-          <h2 className='font-roboto uppercase font-semibold text-4xl py-8'>Why choose Vedoc</h2>
+          <h3 className='text-lg font-semibold leading-8 pt-16 lg:pt-0'>Benefits</h3>
+          <h2 className='font-roboto uppercase font-semibold text-xl lg:text-4xl py-8 text-center'>Why choose Vedoc</h2>
           <div className='flex flex-wrap'>
             <div className='benefit-card'>
               <Image  src='/images/benefits_01.png' alt='One-stop auto solution' width={100} height={100} quality={100} className='benefit-icon' />
