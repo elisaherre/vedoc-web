@@ -38,20 +38,29 @@
 
   /* Ad */
   .ad-section {
-    @apply w-full lg:flex bg-vedoc-ad-yellow shadow xl:h-auto h-fit pt-24 lg:px-24;
+    @apply w-full flex flex-wrap lg:flex-nowrap bg-vedoc-ad-yellow shadow xl:h-auto h-fit px-8 lg:px-20 pt-8 md:pt-10 xl:pt-24 xl:px-24;
   }
 
   .phones {
-    @apply bg-cover lg:bg-contain xl:bg-cover bg-no-repeat bg-top overflow-y-hidden;
+    @apply bg-cover bg-no-repeat lg:bg-top lg:overflow-y-hidden w-96 h-80 lg:h-full;
     background-image: url('/images/ad_app.png');
-    width: 524px;
+    @media only screen and (min-width: 1280px) {
+      width: 524px;
+    }
   }
 
   /* Footer */
   .vedoc-footer li+li::before {
+    @apply p-1 md:p-4;
     content: "";
-    padding: 1rem;
   }
+
+  .vedoc-footer {
+    @apply flex flex-wrap justify-center sm:justify-start md:text-sm text-vedoc-black font-light;
+    @media only screen and (max-width: 768px) {
+      font-size: 0.6rem;
+    }
+    }
 
   .button-vedoc {
     @apply absolute right-2 top-1/2 transform -translate-y-1/2 text-vedoc-black bg-vedoc-yellow hover:bg-vedoc-ad-yellow focus:ring-4 focus:outline-none focus:ring-gray-300 rounded-lg text-sm px-5 py-2 text-center border border-gray-300;

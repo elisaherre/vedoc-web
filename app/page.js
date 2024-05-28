@@ -3,6 +3,8 @@
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { Carousel } from 'react-responsive-carousel';
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 export default function Home() {
   const [currentText, setCurrentText] = useState(0);
@@ -34,10 +36,11 @@ export default function Home() {
         </div>
         <div className='hero-image'></div>
       </div>
-      <section>
+      {/* <section>
         <div className='flex flex-col items-center px-24 pb-20'>
           <h3 className='text-lg font-semibold leading-8 pt-16 lg:pt-0'>Benefits</h3>
           <h2 className='font-roboto uppercase font-semibold text-xl lg:text-4xl py-8 text-center'>Why choose Vedoc</h2>
+
           <div className='flex flex-wrap'>
             <div className='benefit-card'>
               <Image  src='/images/benefits_01.png' alt='One-stop auto solution' width={100} height={100} quality={100} className='benefit-icon' />
@@ -68,9 +71,12 @@ export default function Home() {
               </div>
             </div>
           </div>
+
+
+
         </div>
-      </section>
-      <section>
+      </section> */}
+      {/* <section>
         <div className='flex flex-col items-center px-24 pb-20'>
           <h3 className='text-lg font-semibold leading-8'>How It Works</h3>
           <h2 className='font-roboto uppercase font-semibold text-4xl py-8'>Simplified Auto Care Experience on Vedoc</h2>
@@ -137,7 +143,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 }
