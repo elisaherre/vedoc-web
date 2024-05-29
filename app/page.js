@@ -25,21 +25,24 @@ export default function Home() {
 
   return (
     <div>
-      <div className="flex flex-col w-full justify-center items-center bg-white px-6 lg:px-24 pt-40">
-        <h2 className='text-xl md:text-4xl lg:text-6xl font-bold uppercase font-roboto text-center' id="text-carousel">
+      {/* Hero */}
+      <div className="flex flex-col w-full justify-center items-center bg-white px-6 lg:px-24 pt-44">
+        <h2 className='text-xl md:text-4xl lg:text-6xl font-medium uppercase font-roboto text-vedoc-black text-center' id="text-carousel">
           {texts[currentText]}
         </h2>
-        <p className='py-6 text-sm lg:text-xl leading-8 text-center'>Start now, connect with trusted auto pros or list your shop with Vedoc today!</p>
+        <p className='py-6 text-sm lg:text-xl leading-8 text-center font-light'>Start now, connect with trusted auto pros or list your shop with Vedoc today!</p>
         <div className='flex justify-between gap-2'>
           <Link href="#" className=''><div className='app-store-icon'></div></Link>
           <Link href="#" className=''><div className='google-play-icon'></div></Link>
         </div>
         <div className='hero-image'></div>
       </div>
-      {/* <section>
+
+      {/* Benefits section */}
+      <section>
         <div className='flex flex-col items-center px-24 pb-20'>
-          <h3 className='text-lg font-semibold leading-8 pt-16 lg:pt-0'>Benefits</h3>
-          <h2 className='font-roboto uppercase font-semibold text-xl lg:text-4xl py-8 text-center'>Why choose Vedoc</h2>
+          <h3 className='text-lg font-medium leading-8 pt-16 lg:pt-0'>Benefits</h3>
+          <h2 className='font-roboto uppercase font-medium text-xl lg:text-4xl pt-7 pb-10 text-center'>Why choose Vedoc</h2>
 
           <div className='flex flex-wrap'>
             <div className='benefit-card'>
@@ -75,36 +78,38 @@ export default function Home() {
 
 
         </div>
-      </section> */}
-      {/* <section>
+      </section>
+
+      {/* How it works section */}
+      <section>
         <div className='flex flex-col items-center px-24 pb-20'>
-          <h3 className='text-lg font-semibold leading-8'>How It Works</h3>
-          <h2 className='font-roboto uppercase font-semibold text-4xl py-8'>Simplified Auto Care Experience on Vedoc</h2>
+          <h3 className='text-lg font-medium leading-8'>How It Works</h3>
+          <h2 className='font-roboto uppercase font-medium text-4xl py-8'>Simplified Auto Care Experience on Vedoc</h2>
           <div className='flex flex-wrap pt-6 justify-between'>
             <div className='how-it-works-card'>
               <div className='num'>
-                <p>01</p>
+                <h5>01</h5>
               </div>
               <h4>Pick Your Service Category</h4>
               <p>Begin your car care adventure by selecting the service category that suits your vehicle&apos;s needs. Whether it&apos;s routine maintenance, repairs, or diagnostics, Vedoc offers a comprehensive array of services. Our intuitive platform allows you to browse through various categories, ensuring that you find the perfect match for your car&apos;s requirements.</p>
             </div>
             <div className='how-it-works-card'>
               <div className='num'>
-                <p>02</p>
+                <h5>02</h5>
               </div>
               <h4>Provide Details About Your Car</h4>
               <p>Personalization is key, and Vedoc empowers you to provide specific details about your vehicle. From make and model to year and mileage, sharing these insights ensures that our vetted auto professionals can deliver accurate estimates tailored to your car&apos;s unique specifications. It&apos;s about precision, transparency, and a service uniquely crafted for your vehicle.</p>
             </div>
             <div className='how-it-works-card'>
               <div className='num'>
-                <p>03</p>
+                <h5>03</h5>
               </div>
               <h4>Shop Sends Estimate Directly to You</h4>
               <p>Once you&apos;ve submitted your car details and selected your desired service category, our network of trusted auto professionals swings into action. Vetted shops and mobile providers review your request and send detailed estimates directly to you.</p>
             </div>
             <div className='how-it-works-card'>
               <div className='num'>
-                <p>04</p>
+                <h5>04</h5>
               </div>
               <h4>Schedule a Service with a Shop </h4>
               <p>With estimates in hand, the power is now in your hands. Choose the service provider that aligns with your preferences, budget, and scheduling needs. Vedoc ensures a seamless transition from estimate to appointment, allowing you to schedule your preferred service with a trusted shop or mobile provider directly through our platform.</p>
@@ -112,10 +117,12 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Tesstimonials */}
       <section>
         <div className='flex flex-col items-center px-24 pt-20 pb-10 bg-vedoc-light-yellow'>
-          <h3 className='text-lg font-semibold leading-8'>Testimonials</h3>
-          <h2 className='font-roboto uppercase font-semibold text-4xl py-8'>Our customers love what we do</h2>
+          <h3 className='text-lg font-medium leading-8'>Testimonials</h3>
+          <h2 className='font-roboto uppercase font-medium text-4xl py-8'>Our customers love what we do</h2>
           <div className='flex flex-wrap py-10 justify-between'>
             <div className='testimonial-card'>
               <Image src='/images/stars.png' alt='Five Stars Rating' width={100} height={100} quality={100}/>
@@ -143,7 +150,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section> */}
+      </section>
     </div>
   );
 }
