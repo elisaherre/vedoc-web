@@ -169,7 +169,7 @@
   }
 
   .how-it-works-card h4 {
-    @apply font-roboto font-medium text-lg md:text-2xl text-vedoc-black px-4 md:pt-8 md:pb-5;
+    @apply font-roboto font-medium text-lg md:text-2xl text-vedoc-black pt-4 md:pt-8 md:pb-5;
   }
 
   .how-it-works-card p {
@@ -178,10 +178,22 @@
 
   /* Testimonials Section */
   .testimonial-card {
-    @apply p-5 w-1/3 h-72 text-sm leading-8 font-light;
+    @apply p-5  text-sm leading-8 font-light;
+      @media only screen and (min-width: 1024px) {
+        width: 270px;
+        height: 380px;
+      }
+      @media only screen and (min-width: 1440px) {
+        width: 416px;
+        height: 288px;
+      }
   }
 
   .testimonial-card h5 {
     @apply font-roboto font-medium text-2xl text-vedoc-black py-2;
+  }
+
+  .rating-star {
+    @apply text-vedoc-black w-5;
   }
 }

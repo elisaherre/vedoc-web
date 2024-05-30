@@ -1,10 +1,9 @@
 "use client";
 
 import { useEffect, useState } from 'react';
-import Image from 'next/image';
 import Link from 'next/link';
-import { Carousel } from 'react-responsive-carousel';
-import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faStar } from '@fortawesome/free-solid-svg-icons'
 
 export default function Home() {
   const [currentText, setCurrentText] = useState(0);
@@ -26,12 +25,12 @@ export default function Home() {
   return (
     <div>
       {/* Hero */}
-      <div className="flex flex-col w-full justify-center items-center bg-white px-6 lg:px-24 pt-44">
+      <div className="flex flex-col w-full justify-center items-center bg-white px-6 lg:px-24 pt-36">
         <h2 className='text-xl md:text-4xl lg:text-6xl font-medium uppercase font-roboto text-vedoc-black text-center' id="text-carousel">
           {texts[currentText]}
         </h2>
         <p className='py-6 text-sm lg:text-xl leading-8 text-center font-light'>Start now, connect with trusted auto pros or list your shop with Vedoc today!</p>
-        <div className='flex justify-between gap-2'>
+        <div className='flex flex-wrap justify-center gap-2 lg:pb-10 py-2 md:py-5 lg:py-0'>
           <Link href="#" className=''><div className='app-store-icon'></div></Link>
           <Link href="#" className=''><div className='google-play-icon'></div></Link>
         </div>
@@ -60,7 +59,7 @@ export default function Home() {
               </div>
             </div>
             <div className='benefit-card'>
-              <Image  src='/images/benefits_03.png' alt='A Win-Win for Everyone Involved' width={100} height={100} quality={100} className='benefit-icon' />
+              <Image  src='/images/benefits_03.png' alt='A Win-Win for Everyone Involved' width={100} height={100} quality={100} className='benefit-icon</div>' />
               <div className='benefit-card-info'>
                 <h5>A Win-Win for Everyone Involved</h5>
                 <p>Vedoc operates on a win-win principle. Users find what they need, reputable providers gain visibility, and Vedoc facilitates the connection, ensuring a harmonious ecosystem. By driving traffic to small-medium businesses, Vedoc not only serves users but also nurtures the growth of local enterprises.</p>
@@ -119,13 +118,19 @@ export default function Home() {
       </section>
 
       {/* Tesstimonials */}
-      {/* <section>
-        <div className='flex flex-col items-center px-24 pt-20 pb-10 bg-vedoc-light-yellow'>
-          <h3 className='text-lg font-medium leading-8'>Testimonials</h3>
-          <h2 className='font-roboto uppercase font-medium text-4xl py-8'>Our customers love what we do</h2>
-          <div className='flex flex-wrap py-10 justify-between'>
+      <section>
+        <div className='flex flex-col items-center p-8 md:px-24 md:pt-20 md:pb-10 bg-vedoc-light-yellow'>
+          <h3 className='text-xs md:text-lg font-medium leading-8'>Testimonials</h3>
+          <h2 className='font-roboto uppercase font-medium text-xl md:text-4xl py-4 md:py-8 text-center'>Our customers love what we do</h2>
+          <div className='flex flex-wrap md:py-10 justify-between w-full'>
             <div className='testimonial-card'>
-              <Image src='/images/stars.png' alt='Five Stars Rating' width={100} height={100} quality={100}/>
+              <div>
+                <FontAwesomeIcon icon={faStar} className='rating-star'/>
+                <FontAwesomeIcon icon={faStar} className='rating-star'/>
+                <FontAwesomeIcon icon={faStar} className='rating-star'/>
+                <FontAwesomeIcon icon={faStar} className='rating-star'/>
+                <FontAwesomeIcon icon={faStar} className='rating-star'/>
+              </div>
               <div className='pt-4'>
                 <p>They came yesterday and did an incredible job! I can&apos;t even begin to explain how good of a job! We left for Alaska this morning and having my car clean was life giving. I told some of my girlfriends and they are ready to book.</p>
                 <h5>Elizabeth L</h5>
@@ -133,7 +138,13 @@ export default function Home() {
               </div>
             </div>
             <div className='testimonial-card'>
-              <Image src='/images/stars.png' alt='Five Stars Rating' width={100} height={100} quality={100}/>
+              <div>
+                <FontAwesomeIcon icon={faStar} className='rating-star'/>
+                <FontAwesomeIcon icon={faStar} className='rating-star'/>
+                <FontAwesomeIcon icon={faStar} className='rating-star'/>
+                <FontAwesomeIcon icon={faStar} className='rating-star'/>
+                <FontAwesomeIcon icon={faStar} className='rating-star'/>
+              </div>
               <div className='pt-4'>
                 <p>Yoguef was fantastic I locked my keys in my vehicle and he was in the right place at the right time. Amazing service, very kind and professional If you need someone to help you give him a call.</p>
                 <h5>Millis E</h5>
@@ -141,7 +152,13 @@ export default function Home() {
               </div>
             </div>
             <div className='testimonial-card'>
-              <Image src='/images/stars.png' alt='Five Stars Rating' width={100} height={100} quality={100}/>
+              <div>
+                <FontAwesomeIcon icon={faStar} className='rating-star'/>
+                <FontAwesomeIcon icon={faStar} className='rating-star'/>
+                <FontAwesomeIcon icon={faStar} className='rating-star'/>
+                <FontAwesomeIcon icon={faStar} className='rating-star'/>
+                <FontAwesomeIcon icon={faStar} className='rating-star'/>
+              </div>
               <div className='pt-4'>
                 <p>This is looking really great. The process is so much easier going through the app versus trying to find a place; having communications through the app is super helpful. Also, the app is pretty intuitive and simple to use.</p>
                 <h5>Judith L</h5>
@@ -150,7 +167,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section> */}
+      </section>
     </div>
   );
 }
