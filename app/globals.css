@@ -5,49 +5,96 @@
 @tailwind utilities;
 
 @layer components {
+  html {
+    @apply sm:max-md:w-full;
+  }
+
+  body.lock-scroll {
+    overflow: hidden;
+  }
+
   /* Layout */
   /* Navbar */
   .navbar {
-    @apply bg-white border-b shadow-sm fixed w-full justify-between px-6 py-4 xl:px-28 items-center font-normal z-50;
+    @apply bg-white border-b shadow-sm fixed w-screen justify-between px-6 py-4 xl:px-28 items-center font-normal z-50;
   }
 
   .navbar li {
-    @apply hidden text-lg text-gray-500 xl:block;
+    @apply hidden text-lg text-gray-500 font-light md:block;
+  }
+
+  .active {
+    @apply underline text-vedoc-black;
   }
 
   .navbar li+li::before {
+    @apply p-4 md:p-2;
     content: "";
-    padding: 1rem;
   }
 
   .button-lg {
     @apply hidden bg-vedoc-yellow hover:bg-vedoc-ad-yellow h-14 w-64 xl:flex justify-center items-center rounded-lg
-    border border-gray-500 shadow-md text-vedoc-black text-xl leading-7;
+    border border-gray-500 shadow-md text-vedoc-black text-lg leading-7;
+    transition-property: background-color;
+    transition-duration: 0.3s;
+    ;
+  }
+
+  .button-md {
+    @apply bg-vedoc-yellow hover:bg-vedoc-ad-yellow flex justify-center items-center rounded-lg
+    border border-gray-500 shadow-md text-vedoc-black text-lg h-14 w-64;
     transition-property: background-color;
     transition-duration: 0.3s;
     ;
   }
 
   .burguer-menu {
-    @apply xl:hidden
+    @apply md:hidden;
+  }
+
+  .dropdown-menu {
+    @apply bg-white w-full top-24 absolute z-40 p-6 md:hidden;
+    height: calc(100vh - 85px);
+  }
+
+  .dropdown-menu ul {
+    @apply flex flex-col items-center justify-between h-full;
+  }
+
+  .dropdown-menu li {
+    @apply p-2 text-base text-gray-500;
+
+  }
+
+  .dropdown-menu li:hover {
+    @apply text-vedoc-black;
   }
 
   /* Ad */
   .ad-section {
-    @apply w-full lg:flex bg-vedoc-ad-yellow shadow xl:h-auto h-fit pt-24 lg:px-24;
+    @apply w-full flex flex-wrap lg:flex-nowrap bg-vedoc-ad-yellow shadow xl:h-auto h-fit px-8 lg:px-20 pt-8 md:pt-10 xl:pt-24 xl:px-24;
   }
 
   .phones {
-    @apply bg-cover lg:bg-contain xl:bg-cover bg-no-repeat bg-top overflow-y-hidden;
+    @apply bg-cover bg-no-repeat lg:bg-top lg:overflow-y-hidden w-96 h-80 lg:h-full;
     background-image: url('/images/ad_app.png');
-    width: 524px;
+    @media only screen and (min-width: 1280px) {
+      width: 524px;
+    }
   }
 
   /* Footer */
   .vedoc-footer li+li::before {
+    @apply p-1 md:p-4;
     content: "";
-    padding: 1rem;
   }
+
+  .vedoc-footer {
+    @apply flex flex-wrap justify-center sm:justify-start md:text-sm text-vedoc-black font-light;
+    @media only screen and (max-width: 768px) {
+      font-size: 0.6rem;
+    }
+    }
 
   .button-vedoc {
     @apply absolute right-2 top-1/2 transform -translate-y-1/2 text-vedoc-black bg-vedoc-yellow hover:bg-vedoc-ad-yellow focus:ring-4 focus:outline-none focus:ring-gray-300 rounded-lg text-sm px-5 py-2 text-center border border-gray-300;
@@ -55,14 +102,32 @@
     transition-duration: 0.3s;
   }
 
+  .fa-icon-container {
+    @apply flex items-center justify-center border-black rounded-full w-8 h-8;
+    border-width: 0.5px;
+  }
+
+  .fa-icon {
+    @apply text-vedoc-black w-5;
+  }
+
   /* Home */
   /* Hero */
 
   .hero-image {
-    @apply bg-contain bg-no-repeat bg-center h-screen my-10;
+    @apply bg-cover lg:bg-contain bg-no-repeat bg-center h-64 lg:h-screen my-6 lg:my-10 w-full lg:w-3/4 bg-clip-content;
     background-image: url('/images/hero.png');
-    width: 75%;
   }
+
+  .app-store-icon {
+    @apply bg-cover bg-no-repeat bg-center h-12 w-36;
+    background-image: url('/images/app_store.png');
+  };
+
+  .google-play-icon {
+    @apply bg-cover bg-no-repeat bg-center h-12 w-40;
+    background-image: url('/images/google_play.png');
+  };
 
   /* Benefits Section */
 
@@ -75,11 +140,11 @@
   }
 
   .benefit-card-info h5 {
-    @apply font-roboto font-bold text-2xl text-vedoc-black uppercase;
+    @apply font-roboto font-medium text-2xl text-vedoc-black uppercase;
   }
 
   .benefit-card-info p {
-    @apply leading-8 pt-6;
+    @apply leading-8 pt-6 font-light;
   }
 
   .benefit-icon {
@@ -98,15 +163,19 @@
   }
 
   .how-it-works-card h4 {
-    @apply font-roboto font-bold text-2xl text-vedoc-black pt-8 pb-5;
+    @apply font-roboto font-medium text-2xl text-vedoc-black pt-8 pb-5;
+  }
+
+  .how-it-works-card p {
+    @apply font-light;
   }
 
   /* Testimonials Section */
   .testimonial-card {
-    @apply p-5 w-1/3 h-72 text-sm leading-8;
+    @apply p-5 w-1/3 h-72 text-sm leading-8 font-light;
   }
 
   .testimonial-card h5 {
-    @apply font-roboto font-semibold text-2xl text-vedoc-black py-2;
+    @apply font-roboto font-medium text-2xl text-vedoc-black py-2;
   }
 }
