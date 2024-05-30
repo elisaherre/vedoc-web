@@ -117,6 +117,9 @@
   .hero-image {
     @apply bg-cover lg:bg-contain bg-no-repeat bg-center h-64 lg:h-screen my-6 lg:my-10 w-full lg:w-3/4 bg-clip-content;
     background-image: url('/images/hero.png');
+    @media only screen and (min-width: 425px) and (max-width: 768px) {
+      background-size: contain;
+    }
   }
 
   .app-store-icon {
@@ -152,22 +155,25 @@
   }
 
   /* How It Works Section */
+
   .how-it-works-card {
-    @apply bg-vedoc-light-yellow bg-opacity-40 rounded-lg p-10 shadow leading-8 hover:bg-opacity-100 hover:bg-vedoc-ad-yellow duration-700 my-6;
-    width: 560px;
-    height: 400px;
+    @apply bg-vedoc-light-yellow bg-opacity-40 rounded-lg p-6 md:p-10 shadow leading-8 hover:bg-opacity-100 hover:bg-vedoc-ad-yellow duration-700 my-6 sm:max-md:w-full;
+    @media only screen and (min-width: 768px) {
+      width: 560px;
+      height: 400px;
+    }
   }
 
   .num {
-    @apply font-roboto font-medium text-2xl text-vedoc-yellow bg-vedoc-black w-12 h-12 rounded-full flex items-center justify-center;
+    @apply font-roboto font-medium text-lg md:text-2xl text-vedoc-yellow bg-vedoc-black w-11 h-11 md:w-12 md:h-12 rounded-full flex items-center justify-center;
   }
 
   .how-it-works-card h4 {
-    @apply font-roboto font-medium text-2xl text-vedoc-black pt-8 pb-5;
+    @apply font-roboto font-medium text-lg md:text-2xl text-vedoc-black px-4 md:pt-8 md:pb-5;
   }
 
   .how-it-works-card p {
-    @apply font-light;
+    @apply font-light text-sm leading-8 md:text-base;
   }
 
   /* Testimonials Section */

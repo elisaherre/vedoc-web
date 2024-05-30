@@ -81,11 +81,11 @@ export default function Home() {
       </section> */}
 
       {/* How it works section */}
-      {/* <section>
-        <div className='flex flex-col items-center px-24 pb-20'>
-          <h3 className='text-lg font-medium leading-8'>How It Works</h3>
-          <h2 className='font-roboto uppercase font-medium text-4xl py-8'>Simplified Auto Care Experience on Vedoc</h2>
-          <div className='flex flex-wrap pt-6 justify-between'>
+      <section>
+        <div className='flex flex-col items-center px-8 md:px-24 pb-20'>
+          <h3 className='text-xs md:text-lg font-medium leading-8'>How It Works</h3>
+          <h2 className='font-roboto uppercase font-medium text-xl md:text-4xl py-8 text-center'>Simplified Auto Care Experience on Vedoc</h2>
+          <div className='flex flex-wrap pt-6 justify-center xl:justify-between'>
             <div className='how-it-works-card'>
               <div className='num'>
                 <h5>01</h5>
@@ -116,7 +116,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section> */}
+      </section>
 
       {/* Tesstimonials */}
       {/* <section>
