@@ -39,7 +39,7 @@ export default function Home() {
       </div>
 
       {/* Benefits section */}
-      <section>
+      {/* <section>
         <div className='flex flex-col items-center px-24 pb-20'>
           <h3 className='text-lg font-medium leading-8 pt-16 lg:pt-0'>Benefits</h3>
           <h2 className='font-roboto uppercase font-medium text-xl lg:text-4xl pt-7 pb-10 text-center'>Why choose Vedoc</h2>
@@ -78,10 +78,10 @@ export default function Home() {
 
 
         </div>
-      </section>
+      </section> */}
 
       {/* How it works section */}
-      <section>
+      {/* <section>
         <div className='flex flex-col items-center px-24 pb-20'>
           <h3 className='text-lg font-medium leading-8'>How It Works</h3>
           <h2 className='font-roboto uppercase font-medium text-4xl py-8'>Simplified Auto Care Experience on Vedoc</h2>
@@ -116,10 +116,10 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Tesstimonials */}
-      <section>
+      {/* <section>
         <div className='flex flex-col items-center px-24 pt-20 pb-10 bg-vedoc-light-yellow'>
           <h3 className='text-lg font-medium leading-8'>Testimonials</h3>
           <h2 className='font-roboto uppercase font-medium text-4xl py-8'>Our customers love what we do</h2>
@@ -150,7 +150,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 }

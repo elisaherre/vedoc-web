@@ -4,7 +4,10 @@ import '../globals.css'
 import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faBars } from '@fortawesome/free-solid-svg-icons'
+import { faX } from '@fortawesome/free-solid-svg-icons'
 
 export default function Navbar() {
 
@@ -14,6 +17,20 @@ export default function Navbar() {
   const toggleDropdown = () => {
     setDropdownVisible(!dropdownVisible);
   }
+
+  // Hide the dropdown when the pathname changes
+  useEffect(() => {
+    setDropdownVisible(false);
+  }, [pathname]);
+
+  // Lock scroll when dropdown is visible
+  useEffect(() => {
+    if (dropdownVisible) {
+      document.body.classList.add('lock-scroll');
+    } else {
+      document.body.classList.remove('lock-scroll');
+    }
+  }, [dropdownVisible]);
 
   return (
     <header>
@@ -55,12 +72,7 @@ export default function Navbar() {
 
       {/* Mobile Version */}
       <Link href="#" className='burguer-menu' onClick={toggleDropdown}>
-        <Image
-          src='/images/menu.png'
-          alt='Menu'
-          width={30}
-          height={30}
-        />
+        <FontAwesomeIcon icon={dropdownVisible ? faX : faBars} className='text-vedoc-black font-light h-6 w-10'/>
       </Link>
     </div>
 

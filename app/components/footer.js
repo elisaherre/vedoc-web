@@ -2,6 +2,13 @@ import '../globals.css'
 import Image from 'next/image'
 import Link from 'next/link'
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
+import { faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
+import { faXTwitter } from '@fortawesome/free-brands-svg-icons'
+import { faFacebook } from '@fortawesome/free-brands-svg-icons'
+import { faInstagram } from '@fortawesome/free-brands-svg-icons'
+
 export default function Footer () {
   return (
     <footer className='flex flex-col w-screen items-center px-4 md:px-10 lg:px-24 bg-white'>
@@ -19,30 +26,25 @@ export default function Footer () {
           className='pb-5'
           />
           <div className='flex items-center'>
-            <Image
-            src='/images/icon_mail.png'
-            alt='Mail'
-            width={42}
-            height={42}
-            quality={100}
-            className='pr-2'
-            />
+            <div className='fa-icon-container mr-2'>
+              <FontAwesomeIcon icon={faEnvelope} className='fa-icon'/>
+            </div>
             <p className='text-sm font-light text-vedoc-black'>info@vedocapp.com</p>
           </div>
           <ul className='flex items-center pt-5 justify-between pb-10 lg:pb-0'>
-            <li><Link href="https://www.linkedin.com/company/vedoc-app"><Image src='/images/icon_linkedin.png' alt='LinkedIn' width={35} height={35} quality={100} className='icon'/></Link></li>
-            <li><Link href="https://twitter.com/vedocapp"><Image src='/images/icon_x.png' alt='X' width={35} height={35} quality={100} className='icon'/></Link></li>
-            <li><Link href="https://facebook.com/vedocapp"><Image src='/images/icon_fb.png' alt='Facebook' width={35} height={35} quality={100} className='icon'/></Link></li>
-            <li><Link href="https://www.instagram.com/vehicledoctor"><Image src='/images/icon_ig.png' alt='Instagram' width={35} height={35} quality={100} className='icon'/></Link></li>
+            <li><Link href="https://www.linkedin.com/company/vedoc-app"><div className='fa-icon-container'><FontAwesomeIcon icon={faLinkedinIn} className='fa-icon'/></div></Link></li>
+            <li><Link href="https://twitter.com/vedocapp"><div className='fa-icon-container'><FontAwesomeIcon icon={faXTwitter} className='fa-icon'/></div></Link></li>
+            <li><Link href="https://facebook.com/vedocapp"><div className='fa-icon-container'><FontAwesomeIcon icon={faFacebook} className='fa-icon'/></div></Link></li>
+            <li><Link href="https://www.instagram.com/vehicledoctor"><div className='fa-icon-container'><FontAwesomeIcon icon={faInstagram} className='fa-icon'/></div></Link></li>
           </ul>
         </div>
 
         {/* Suscription Form */}
-        <div class='flex flex-col md:w-3/5 lg:w-2/5 xl:w-1/3 justify-center'>
+        <div className='flex flex-col md:w-3/5 lg:w-2/5 xl:w-1/3 justify-center'>
           <p className='pb-5 text-sm font-light text-vedoc-black'>Subscribe to Vedoc&apos;s Newsletter for new features updates and articles delivered right to your inbox.</p>
-          <form class="max-w-sm relative">
-            <input type="email" id="email" class="shadow bg-white border border-gray-400 text-gray-700 text-sm text-light rounded-lg focus:ring-vedoc-yellow focus:border-vedoc-yellow block w-full p-5" placeholder="Email address" required/>
-            <button type="submit" class="button-vedoc">Subscribe</button>
+          <form className="max-w-sm relative">
+            <input type="email" id="email" className="shadow bg-white border border-gray-400 text-gray-700 text-sm text-light rounded-lg focus:ring-vedoc-yellow focus:border-vedoc-yellow block w-full p-5" placeholder="Email address" required/>
+            <button type="submit" className="button-vedoc">Subscribe</button>
           </form>
 
         </div>
