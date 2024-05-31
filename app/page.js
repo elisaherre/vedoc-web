@@ -2,8 +2,19 @@
 
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faStar } from '@fortawesome/free-solid-svg-icons'
+import { faStar, faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons'
+
+import { Navigation, Pagination } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/swiper-bundle.css';
+
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+
+
 
 export default function Home() {
   const [currentText, setCurrentText] = useState(0);
@@ -38,12 +49,13 @@ export default function Home() {
       </div>
 
       {/* Benefits section */}
-      {/* <section>
-        <div className='flex flex-col items-center px-24 pb-20'>
+      <section>
+        <div className='flex flex-col items-center px-8 md:px-24 pb-10 md:pb-20'>
           <h3 className='text-lg font-medium leading-8 pt-16 lg:pt-0'>Benefits</h3>
           <h2 className='font-roboto uppercase font-medium text-xl lg:text-4xl pt-7 pb-10 text-center'>Why choose Vedoc</h2>
 
-          <div className='flex flex-wrap'>
+          {/* Desktop version */}
+          <div className='hidden lg:flex lg:flex-wrap'>
             <div className='benefit-card'>
               <Image  src='/images/benefits_01.png' alt='One-stop auto solution' width={100} height={100} quality={100} className='benefit-icon' />
               <div className='benefit-card-info'>
@@ -59,7 +71,7 @@ export default function Home() {
               </div>
             </div>
             <div className='benefit-card'>
-              <Image  src='/images/benefits_03.png' alt='A Win-Win for Everyone Involved' width={100} height={100} quality={100} className='benefit-icon</div>' />
+              <Image  src='/images/benefits_03.png' alt='A Win-Win for Everyone Involved' width={100} height={100} quality={100} className='benefit-icon' />
               <div className='benefit-card-info'>
                 <h5>A Win-Win for Everyone Involved</h5>
                 <p>Vedoc operates on a win-win principle. Users find what they need, reputable providers gain visibility, and Vedoc facilitates the connection, ensuring a harmonious ecosystem. By driving traffic to small-medium businesses, Vedoc not only serves users but also nurtures the growth of local enterprises.</p>
@@ -74,10 +86,71 @@ export default function Home() {
             </div>
           </div>
 
+          {/* Mobile version */}
+          <div className='swiper-container'>
 
+            <Swiper modules={[Navigation, Pagination]} spaceBetween={0} slidesPerView={1} pagination={{ clickable: true }} loop={true}
+                style={{
+                  "--swiper-pagination-color": "#FFE473",
+                }}
+                navigation={{
+                  nextEl: '.custom-next',
+                  prevEl: '.custom-prev',
+                }}
+                >
+
+
+              <SwiperSlide>
+                <div className='benefit-card'>
+                  <Image src='/images/benefits_01.png' alt='One-stop auto solution' width={100} height={100} quality={100} className='benefit-icon' />
+                  <div className='benefit-card-info'>
+                    <h5>One-stop auto solution</h5>
+                    <p>Vedoc is your one-stop solution for all things auto-related. Whether it&apos;s repairs, styling, or assistance on the roadside, our platform seamlessly connects you with providers, ensuring all your vehicle needs are met conveniently in one place.</p>
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className='benefit-card'>
+                  <Image src='/images/benefits_02.png' alt='Peer-to-Peer Connectivity' width={100} height={100} quality={100} className='benefit-icon' />
+                  <div className='benefit-card-info'>
+                    <h5>Peer-to-Peer Connectivity</h5>
+                    <p>No more phone calls, no more endless online searches. Vedoc&apos;s peer-to-peer connectivity ensures a swift connection to a reputable provider through our user-friendly app. Our unique features streamline the process, making your interaction smooth and efficient.</p>
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className='benefit-card'>
+                  <Image src='/images/benefits_03.png' alt='A Win-Win for Everyone Involved' width={100} height={100} quality={100} className='benefit-icon' />
+                  <div className='benefit-card-info'>
+                    <h5>A Win-Win for Everyone Involved</h5>
+                    <p>Vedoc operates on a win-win principle. Users find what they need, reputable providers gain visibility, and Vedoc facilitates the connection, ensuring a harmonious ecosystem. By driving traffic to small-medium businesses, Vedoc not only serves users but also nurtures the growth of local enterprises.</p>
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className='benefit-card'>
+                  <Image src='/images/benefits_04.png' alt='Transparency in Every Transaction' width={100} height={100} quality={100} className='benefit-icon' />
+                  <div className='benefit-card-info'>
+                    <h5>Transparency in Every Transaction</h5>
+                    <p>No more hidden costs or surprises. Vedoc thrives on transparency. Our users can easily obtain estimates from nearby vetted providers, empowering them with the information they need. We scrutinize service quality records and customer ratings, only accepting the best into our app for a transparent and trustworthy experience.</p>
+                  </div>
+                </div>
+              </SwiperSlide>
+            </Swiper>
+
+            <div className='customNavigation'>
+              <button className='custom-prev customButton'>
+                <FontAwesomeIcon icon={faArrowLeft} />
+              </button>
+              <button className='custom-next customButton'>
+                <FontAwesomeIcon icon={faArrowRight} />
+              </button>
+            </div>
+
+          </div>
 
         </div>
-      </section> */}
+      </section>
 
       {/* How it works section */}
       <section>
