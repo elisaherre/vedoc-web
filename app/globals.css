@@ -154,6 +154,8 @@
     @apply border border-black rounded-full;
   }
 
+  /* Benefits Section Mobile Carousel*/
+
   .swiper-container {
     @apply w-full lg:hidden;
     width: 100%;
@@ -198,10 +200,6 @@
     transition: background-color 0.3s ease;
   }
 
-  .customButton:hover {
-    background-color: #f0f0f0;
-  }
-
   .customButton svg {
     color: #000;
     font-size: 1.5rem;
@@ -210,7 +208,6 @@
   .swiper-container {
     position: relative;
   }
-
 
   /* How It Works Section */
 
