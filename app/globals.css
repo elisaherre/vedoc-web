@@ -251,4 +251,11 @@
   .rating-star {
     @apply text-vedoc-black w-5;
   }
+
+  /* About Us Page */
+  .page-image {
+    @apply bg-cover bg-no-repeat bg-center w-full;
+    background-image: url('/images/about_page.png');
+    height: 35rem;
+  }
 }
