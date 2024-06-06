@@ -72,7 +72,7 @@ export default function Navbar() {
 
       {/* Mobile Version */}
       <Link href="#" className='burguer-menu' onClick={toggleDropdown}>
-        <FontAwesomeIcon icon={dropdownVisible ? faX : faBars} className='text-vedoc-black font-light h-6 w-10'/>
+        <FontAwesomeIcon icon={dropdownVisible ? faX : faBars} className='h-5 w-5'/>
       </Link>
     </div>
 
