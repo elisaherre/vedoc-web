@@ -254,8 +254,16 @@
 
   /* About Us Page */
   .page-image {
-    @apply bg-cover bg-no-repeat bg-center w-full;
+    @apply bg-cover bg-no-repeat bg-center w-full h-44;
     background-image: url('/images/about_page.png');
-    height: 35rem;
+    @media only screen and (min-width: 1440px) {
+      height: 40rem;
+    }
+    @media only screen and (min-width: 1024px) and (max-width: 1439px) {
+      height: 27rem;
+    }
+    @media only screen and (min-width: 768px) and (max-width: 1023px) {
+      height: 23rem;
+    }
   }
 }
