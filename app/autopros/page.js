@@ -3,19 +3,21 @@ import Image from 'next/image';
 
 export default function Autopros() {
   return (
-  <div className="flex flex-col w-full justify-center items-center bg-white px-6 lg:px-24 pt-36">
+  <div>
     {/* Header */}
-    <h2 className='text-xl md:text-4xl lg:px-40 lg:text-5xl font-medium uppercase font-roboto text-vedoc-black text-center'>Boost your shop&apos;s visibility with Vedoc</h2>
-    <p className='py-6 text-sm lg:text-xl leading-8 text-center font-light'>Reach more clients in Houston, Austin and Detroit</p>
-    <div className='flex flex-wrap justify-center gap-2 lg:pb-10 py-2 md:py-5 lg:py-0'>
-      <Link href="#" className=''><div className='app-store-icon'></div></Link>
-      <Link href="#" className=''><div className='google-play-icon'></div></Link>
+    <div className="flex flex-col w-full justify-center items-center bg-white px-6 lg:px-24 pt-36">
+      <h2 className='text-xl md:text-4xl lg:px-40 lg:text-5xl font-medium uppercase font-roboto text-vedoc-black text-center'>Boost your shop&apos;s visibility with Vedoc</h2>
+      <p className='py-6 text-sm lg:text-xl leading-8 text-center font-light'>Reach more clients in Houston, Austin and Detroit</p>
+      <div className='flex flex-wrap justify-center gap-2 lg:pb-10 py-2 md:py-5 lg:py-0'>
+        <Link href="#" className=''><div className='app-store-icon'></div></Link>
+        <Link href="#" className=''><div className='google-play-icon'></div></Link>
+      </div>
+      <div className='autopros-page-image mb-20'></div>
     </div>
-    <div className='autopros-page-image mb-20'></div>
 
     {/* Why join Vedoc section */}
     <section>
-      <div className='flex flex-col items-center md:mb-20'>
+      <div className='flex flex-col w-full justify-center items-center bg-white px-6 lg:px-24 md:mb-20'>
         <h3 className='text-lg font-medium leading-8 pt-16 lg:pt-0'>Why join Vedoc</h3>
         <h2 className='font-roboto uppercase font-medium text-xl lg:text-4xl pt-7 pb-10 text-center'>Partner with Vedoc</h2>
 
@@ -56,44 +58,67 @@ export default function Autopros() {
 
     {/* How it works for Autopros */}
     <section>
-      <div className='flex flex-col items-center'>
-        <h3 className='text-lg font-medium leading-8 pt-16 lg:pt-0'>Vedoc for AutoPros</h3>
-        <h2 className='font-roboto uppercase font-medium text-xl lg:text-4xl pt-7 pb-10 text-center'>How it works for autopros</h2>
+      <div className='flex flex-col w-full justify-center items-center bg-white px-6 lg:px-24 md:mb-20'>
+        <div className='flex flex-col items-center'>
+          <h3 className='text-lg font-medium leading-8 pt-16 lg:pt-0'>Vedoc for AutoPros</h3>
+          <h2 className='font-roboto uppercase font-medium text-xl lg:text-4xl pt-7 pb-10 text-center'>How it works for autopros</h2>
+        </div>
+        <div className='flex py-12'>
+          <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-circle">01</div>
+                <div class="timeline-content">
+                    <h2>Sign Up and Customize</h2>
+                    <p>Register your AutoPro business on Vedoc.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-circle">02</div>
+                <div class="timeline-content">
+                    <h2>Post Services and Accept Request</h2>
+                    <p>Set your own service prices and list multiple services. Receive service requests from nearby drivers, expanding your client base. Run unlimited 48-hour flash promotions to boost visibility and attract more users.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-circle">03</div>
+                <div class="timeline-content">
+                    <h2>Activate Your Subscription</h2>
+                    <p>Activate your subscription after receiving your first listing of $100+</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-circle">04</div>
+                <div class="timeline-content">
+                    <h2>Enjoy Exclusive Benefits</h2>
+                    <p>Attend special events and connect with the automotive community. Grow your business with Vedoc’s comprehensive features tailored for automotive excellence.</p>
+                </div>
+            </div>
+          </div>
+          <div className='flex w-1/2 justify-center'>
+            <div className='technician-phone'></div>
+            {/* <Image src='/images/autopros_phone.png' alt='Mobile technician phone' width={100} height={100} quality={100} className='bg-content bg-no-repeat bg-center w-full'/> */}
+          </div>
+        </div>
       </div>
-      <div className='flex'>
-        <div class="timeline">
-          <div class="timeline-item">
-              <div class="timeline-circle">01</div>
-              <div class="timeline-content">
-                  <h2>Sign Up and Customize</h2>
-                  <p>Register your AutoPro business on Vedoc.</p>
-              </div>
+    </section>
+
+    {/* Testimonials */}
+    <section className='bg-vedoc-light-yellow w-full py-12'>
+      <div className='px-24 flex flex-col items-center md:mb-20'>
+          <h3 className='text-lg font-medium leading-8 pt-16 lg:pt-0'>Testimonials</h3>
+          <h2 className='font-roboto uppercase font-medium text-xl lg:text-4xl pt-7 pb-10 text-center'>Autopros share their Vedoc experience</h2>
+
+          <div className='autopro-testimonial-card'>
+            <div className='autopro-text'>
+              <p>As a mechanic in Austin, Vedoc has truly transformed the way I manage my shop. With its user-friendly platform, I can easily list my services and availability, attracting more customers than ever before. The streamlined booking system has helped me stay organized, saving me time and effort. Vedoc&apos;s focus on connecting local mechanics with customers in Austin is commendable, and I&apos;m grateful to be a part of this innovative platform.</p>
+              <h5>John</h5>
+              <p>Owner of John&apos;s Auto Care, Austin</p>
+            </div>
+            <div className='autopro-testimonial-image'>
+              <Image src='/images/testimonial_01.png' alt='Autopro testimonial' width={100} height={100} quality={100} />
+            </div>
           </div>
-          <div class="timeline-item">
-              <div class="timeline-circle">02</div>
-              <div class="timeline-content">
-                  <h2>Post Services and Accept Request</h2>
-                  <p>Set your own service prices and list multiple services. Receive service requests from nearby drivers, expanding your client base. Run unlimited 48-hour flash promotions to boost visibility and attract more users.</p>
-              </div>
-          </div>
-          <div class="timeline-item">
-              <div class="timeline-circle">03</div>
-              <div class="timeline-content">
-                  <h2>Activate Your Subscription</h2>
-                  <p>Activate your subscription after receiving your first listing of $100+</p>
-              </div>
-          </div>
-          <div class="timeline-item">
-              <div class="timeline-circle">04</div>
-              <div class="timeline-content">
-                  <h2>Enjoy Exclusive Benefits</h2>
-                  <p>Attend special events and connect with the automotive community. Grow your business with Vedoc’s comprehensive features tailored for automotive excellence.</p>
-              </div>
-          </div>
-        </div>
-        <div className='w-1/2'>
-          <Image src='/images/autopros_phone.png' alt='A Win-Win for Everyone Involved' width={100} height={100} quality={100} className='bg-cover bg-no-repeat bg-center w-full'/>
-        </div>
+
       </div>
     </section>
 

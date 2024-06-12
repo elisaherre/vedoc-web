@@ -269,7 +269,7 @@
 
   /* Auto Pros Page */
   .autopros-page-image {
-    @apply bg-cover bg-no-repeat bg-center w-full h-44;
+    @apply bg-cover bg-no-repeat bg-center w-full h-44 rounded-lg;
     background-image: url('/images/autopros_01.png');
     @media only screen and (min-width: 1440px) {
       height: 40rem;
@@ -296,7 +296,7 @@
   }
 
   .timeline-item:not(:last-child){
-    @apply border-l border-black pb-5;
+    @apply border-l border-black pb-12;
   }
 
   .timeline-circle {
@@ -318,5 +318,32 @@
 
   .timeline-content p {
     @apply font-light text-sm leading-8 text-vedoc-black;
+  }
+
+  .technician-phone {
+    @apply bg-cover bg-no-repeat bg-center h-full;
+    background-image: url('/images/autopros_phone.png');
+    width: 550px;
+    height: 660px;
+  }
+
+  .autopro-testimonial-card {
+    @apply flex leading-8 font-light gap-20;
+  }
+
+  .autopro-testimonial-card h5 {
+    @apply font-roboto font-medium text-2xl text-vedoc-black py-2;
+  }
+
+  .autopro-text {
+    @apply w-1/2 flex flex-col justify-center;
+  }
+
+  .autopro-testimonial-image {
+    @apply flex justify-center items-center w-1/2;
+  }
+
+  .autopro-testimonial-image img {
+    @apply bg-cover bg-no-repeat bg-center w-96 h-96;
   }
 }

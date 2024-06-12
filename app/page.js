@@ -190,7 +190,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Tesstimonials */}
+      {/* Testimonials */}
       <section>
         <div className='flex flex-col items-center p-8 md:px-24 md:pt-20 md:pb-10 bg-vedoc-light-yellow'>
           <h3 className='text-xs md:text-lg font-medium leading-8'>Testimonials</h3>
