@@ -20,8 +20,7 @@ export default function Ad() {
 
       {/* Image */}
       <div className='flex relative justify-center w-full lg:w-2/5'>
-        <div className='phones'>
-        </div>
+        <div className='phones'></div>
       </div>
     </div>
   )
