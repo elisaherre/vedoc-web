@@ -165,17 +165,24 @@
     min-width: 0;
   }
 
-  .swiper-slide {width: auto;
+  .swiper-container-full {
+    @apply w-full;
+    max-width: 100%;
+    max-height: 100vh;
+  }
+
+  /* .swiper-slide {width: auto;
     flex-shrink: 0;
     display: block;
     height: 100%;
     max-height: 100%;
-    }
+    } */
 
   .swiper-wrapper {
-  max-height: 100%;
+  max-height: 100vh;
   height: 100%;
   display: flex;
+  width: 100vh;
   }
 
   .customNavigation {
@@ -183,8 +190,14 @@
     justify-content: right;
     width: 100%;
     position: absolute;
-    botton: 0;
     transform: translateY(-50%);
+  }
+
+  .customNavigationFull {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
   }
 
   .customButton {
@@ -269,17 +282,13 @@
 
   /* Auto Pros Page */
   .autopros-page-image {
+    @apply mb-20;
+  }
+
+  .autopros-page-image img{
     @apply bg-cover bg-no-repeat bg-center w-full h-44 rounded-lg;
-    background-image: url('/images/autopros_01.png');
-    @media only screen and (min-width: 1440px) {
-      height: 40rem;
-    }
-    @media only screen and (min-width: 1024px) and (max-width: 1439px) {
-      height: 27rem;
-    }
-    @media only screen and (min-width: 768px) and (max-width: 1023px) {
-      height: 23rem;
-    }
+    width: 100em;
+    height: auto;
   }
 
   .timeline {
@@ -290,9 +299,7 @@
 }
 
   .timeline-item {
-
     position: relative;
-
   }
 
   .timeline-item:not(:last-child){
@@ -344,6 +351,8 @@
   }
 
   .autopro-testimonial-image img {
-    @apply bg-cover bg-no-repeat bg-center w-96 h-96;
+    @apply bg-cover bg-no-repeat bg-center rounded-lg;
+    height: 500px;
+    width: 500px;
   }
 }
