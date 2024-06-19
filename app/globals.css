@@ -143,15 +143,15 @@
   }
 
   .benefit-card-info h5 {
-    @apply font-roboto font-medium text-2xl text-vedoc-black uppercase py-3;
+    @apply font-roboto font-medium text-lg lg:text-2xl text-vedoc-black uppercase py-3;
   }
 
   .benefit-card-info p {
-    @apply leading-8 py-3 font-light;
+    @apply leading-8 py-3 font-light text-sm lg:text-base;
   }
 
   .benefit-icon {
-    @apply border border-black rounded-full;
+    @apply border border-black rounded-full h-16 w-16;
   }
 
   /* Benefits Section Mobile Carousel*/
@@ -197,7 +197,10 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    padding-top: 50px;
+    transform: translateY(-30%);
+    @media only screen and (min-width: 768px) {
+      transform: translateY(50%);
+    }
   }
 
   .customButton {
@@ -358,24 +361,35 @@
 
   /* Testimonial Card */
   .autopro-testimonial-card {
-    @apply flex leading-8 font-light gap-20;
+    @apply flex flex-col-reverse lg:flex-row leading-8 font-light lg:gap-10 xl:gap-20;
   }
 
   .autopro-testimonial-card h5 {
-    @apply font-roboto font-medium text-2xl text-vedoc-black py-2;
+    @apply font-roboto font-medium text-2xl text-vedoc-black lg:py-2;
   }
 
   .autopro-text {
-    @apply w-1/2 flex flex-col justify-center;
+    @apply w-full pt-5 lg:pt-0 xl:w-1/2 flex flex-col justify-center text-center lg:text-left;
+  }
+
+  .autopro-text p {
+    @apply text-sm lg:text-base leading-8 lg:leading-9 text-vedoc-black pb-10 lg:pb-0;
   }
 
   .autopro-testimonial-image {
-    @apply flex justify-center items-center w-1/2;
+    @apply flex justify-center items-center w-full xl:w-1/2;
   }
 
   .autopro-testimonial-image img {
-    @apply bg-cover bg-no-repeat bg-center rounded-lg;
-    height: 500px;
-    width: 500px;
+    @apply bg-cover bg-no-repeat bg-center rounded-lg h-72 md:h-96 w-full object-cover object-center;
+
+    @media only screen and (min-width: 1024px) {
+      height: 24rem;
+      width: 25rem;
+    }
+    @media only screen and (min-width: 1280px) {
+      height: 31rem;
+      width: 31rem;
+    }
   }
 }

@@ -58,10 +58,10 @@ export default function Autopros() {
     <section>
       <div className='flex flex-col w-full justify-center items-center bg-white px-6 lg:px-24 md:mb-20'>
         <h3 className='text-lg font-medium leading-8 pt-16 lg:pt-0'>Why join Vedoc</h3>
-        <h2 className='font-roboto uppercase font-medium text-xl lg:text-4xl pt-7 pb-10 text-center'>Partner with Vedoc</h2>
+        <h2 className='font-roboto uppercase font-medium text-xl lg:text-4xl pt-7 pb-5 lg:pb-10 text-center'>Partner with Vedoc</h2>
 
         {/* Desktop version */}
-        <div className='flex flex-wrap'>
+        <div className='flex flex-wrap pb-12 lg:pb-0'>
           <div className='benefit-card'>
             <Image  src='/images/join_01.png' alt='Local reach, targeted visibility' width={100} height={100} quality={100} unoptimized={true} className='benefit-icon' />
             <div className='benefit-card-info'>
@@ -142,9 +142,9 @@ export default function Autopros() {
     </section>
 
     {/* Testimonials */}
-    <section className='bg-vedoc-light-yellow w-full py-12'>
-      <div className='px-24 flex flex-col items-center md:mb-2'>
-          <h3 className='text-lg font-medium leading-8 pt-16 lg:pt-0'>Testimonials</h3>
+    <section className='bg-vedoc-light-yellow w-full pt-12 h-fit pb-24 md:pb-10 lg:pb-20'>
+      <div className='px-6 lg:px-24 flex flex-col items-center md:mb-2'>
+          <h3 className='text-lg font-medium leading-8 pt-0'>Testimonials</h3>
           <h2 className='font-roboto uppercase font-medium text-xl lg:text-4xl pt-7 pb-10 text-center'>Autopros share their Vedoc experience</h2>
 
           <div className='swiper-container-full'>
