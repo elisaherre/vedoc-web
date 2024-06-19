@@ -6,26 +6,25 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons'
 import { Navigation, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import Slider from 'react-slick';
+// import Slider from 'react-slick';
 
 import 'swiper/swiper-bundle.css';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
+// import "slick-carousel/slick/slick.css";
+// import "slick-carousel/slick/slick-theme.css";
 
 export default function Autopros() {
 
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 2000,
-  };
+
+    // const settings = {
+    //   dots: true,
+    //   infinite: true,
+    //   speed: 500,
+    //   slidesToShow: 1,
+    //   slidesToScroll: 1
+    // };
 
   return (
   <div>
@@ -38,7 +37,7 @@ export default function Autopros() {
         <Link href="#" className=''><div className='google-play-icon'></div></Link>
       </div>
 
-      <Slider {...settings}>
+    {/* <Slider {...settings}>
       <div className='autopros-page-image'>
         <Image src='/images/autopros_01.png' alt='Autopro page image' width={100} height={100} quality={100} unoptimized={true} />
       </div>
@@ -51,7 +50,7 @@ export default function Autopros() {
       <div className='autopros-page-image'>
         <Image src='/images/autopros_04.png' alt='Autopro page image' width={100} height={100} quality={100} unoptimized={true} />
       </div>
-    </Slider>
+    </Slider> */}
 
     </div>
 
@@ -62,7 +61,7 @@ export default function Autopros() {
         <h2 className='font-roboto uppercase font-medium text-xl lg:text-4xl pt-7 pb-10 text-center'>Partner with Vedoc</h2>
 
         {/* Desktop version */}
-        <div className='hidden lg:flex lg:flex-wrap'>
+        <div className='flex flex-wrap'>
           <div className='benefit-card'>
             <Image  src='/images/join_01.png' alt='Local reach, targeted visibility' width={100} height={100} quality={100} unoptimized={true} className='benefit-icon' />
             <div className='benefit-card-info'>
@@ -98,13 +97,13 @@ export default function Autopros() {
 
     {/* How it works for Autopros */}
     <section>
-      <div className='flex flex-col w-full justify-center items-center bg-white px-6 lg:px-24 md:mb-20'>
+      <div className='flex flex-col w-full justify-center items-center bg-white px-6 lg:px-24 mb-10 lg:mb-20'>
         <div className='flex flex-col items-center'>
-          <h3 className='text-lg font-medium leading-8 pt-16 lg:pt-0'>Vedoc for AutoPros</h3>
+          <h3 className='text-lg font-medium leading-8 lg:pt-0'>Vedoc for AutoPros</h3>
           <h2 className='font-roboto uppercase font-medium text-xl lg:text-4xl pt-7 pb-10 text-center'>How it works for autopros</h2>
         </div>
-        <div className='flex py-12'>
-          <div class="timeline">
+        <div className='w-full flex flex-col lg:flex-row lg:py-12 justify-center items-center'>
+          <div class="timeline pb-10 lg:pb-0">
             <div class="timeline-item">
                 <div class="timeline-circle">01</div>
                 <div class="timeline-content">
@@ -134,7 +133,7 @@ export default function Autopros() {
                 </div>
             </div>
           </div>
-          <div className='flex w-1/2 justify-center'>
+          <div className='flex w-full md:w-1/2 justify-center items-center'>
             <div className='technician-phone'></div>
             {/* <Image src='/images/autopros_phone.png' alt='Mobile technician phone' width={100} height={100} quality={100} className='bg-content bg-no-repeat bg-center w-full'/> */}
           </div>
