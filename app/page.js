@@ -36,10 +36,10 @@ export default function Home() {
     <div>
       {/* Hero */}
       <div className="flex flex-col w-full justify-center items-center bg-white px-6 lg:px-24 pt-36">
-        <h2 className='text-xl md:text-4xl lg:text-6xl font-medium uppercase font-roboto text-vedoc-black text-center' id="text-carousel">
+        <h2 className='main-title' id="text-carousel">
           {texts[currentText]}
         </h2>
-        <p className='py-6 text-sm lg:text-xl leading-8 text-center font-light'>Start now, connect with trusted auto pros or list your shop with Vedoc today!</p>
+        <p className='subtitle-text py-6'>Start now, connect with trusted auto pros or list your shop with Vedoc today!</p>
         <div className='flex flex-wrap justify-center gap-2 lg:pb-10 py-2 md:py-5 lg:py-0'>
           <Link href="#" className=''><div className='app-store-icon'></div></Link>
           <Link href="#" className=''><div className='google-play-icon'></div></Link>
@@ -50,8 +50,8 @@ export default function Home() {
       {/* Benefits section */}
       <section>
         <div className='flex flex-col items-center px-8 md:px-24 pb-10 md:pb-20'>
-          <h3 className='text-lg font-medium leading-8 pt-16 lg:pt-0'>Benefits</h3>
-          <h2 className='font-roboto uppercase font-medium text-xl lg:text-4xl pt-7 pb-10 text-center'>Why choose Vedoc</h2>
+          <h3 className='intro-title'>Benefits</h3>
+          <h2 className='section-title'>Why choose Vedoc</h2>
 
           {/* Desktop version */}
           <div className='hidden lg:flex lg:flex-wrap'>
@@ -154,8 +154,8 @@ export default function Home() {
       {/* How it works section */}
       <section>
         <div className='flex flex-col items-center px-8 md:px-24 pb-20'>
-          <h3 className='text-xs md:text-lg font-medium leading-8'>How It Works</h3>
-          <h2 className='font-roboto uppercase font-medium text-xl md:text-4xl py-8 text-center'>Simplified Auto Care Experience on Vedoc</h2>
+          <h3 className='intro-title'>How It Works</h3>
+          <h2 className='section-title'>Simplified Auto Care Experience on Vedoc</h2>
           <div className='flex flex-wrap pt-6 justify-center xl:justify-between'>
             <div className='how-it-works-card'>
               <div className='num'>
@@ -192,8 +192,8 @@ export default function Home() {
       {/* Testimonials */}
       <section>
         <div className='flex flex-col items-center p-8 md:px-24 md:pt-20 md:pb-10 bg-vedoc-light-yellow'>
-          <h3 className='text-xs md:text-lg font-medium leading-8'>Testimonials</h3>
-          <h2 className='font-roboto uppercase font-medium text-xl md:text-4xl py-4 md:py-8 text-center'>Our customers love what we do</h2>
+          <h3 className='intro-title'>Testimonials</h3>
+          <h2 className='section-title'>Our customers love what we do</h2>
           <div className='flex flex-wrap md:py-10 justify-between w-full'>
             <div className='testimonial-card'>
               <div>
