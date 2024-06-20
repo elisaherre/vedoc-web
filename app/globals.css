@@ -9,8 +9,36 @@
     @apply sm:max-md:w-full;
   }
 
+  body {
+    @apply text-vedoc-black;
+  }
+
   body.lock-scroll {
-    overflow: hidden;
+    @apply overflow-hidden;
+  }
+
+  .main-title {
+    @apply text-xl md:text-4xl lg:text-6xl font-medium uppercase font-roboto text-center;
+  }
+
+  .page-title {
+    @apply font-roboto uppercase font-medium text-xl lg:text-5xl py-3 md:py-5 text-center;
+  }
+
+  .intro-title {
+    @apply text-xs md:text-lg font-medium leading-8;
+  }
+
+  .section-title {
+    @apply font-roboto uppercase font-medium text-xl md:text-xl lg:text-4xl py-5 md:py-8;
+  }
+
+  .subtitle-text {
+    @apply text-xs md:text-sm lg:text-xl leading-5 md:leading-7 text-center font-light;
+  }
+
+  .content-text {
+    @apply leading-8 font-light text-sm lg:text-base;
   }
 
   /* Layout */
