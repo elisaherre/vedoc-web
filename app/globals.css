@@ -314,7 +314,7 @@
   /* Auto Pros Page */
   /* Header */
   .autopros-page-image {
-    @apply mb-20;
+    @apply mt-5 mb-10 lg:mt-0 lg:mb-20;
   }
 
   .autopros-page-image img{

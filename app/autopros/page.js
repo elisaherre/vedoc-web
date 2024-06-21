@@ -6,30 +6,35 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons'
 import { Navigation, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
-// import Slider from 'react-slick';
+import Slider from 'react-slick';
 
 import 'swiper/swiper-bundle.css';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-// import "slick-carousel/slick/slick.css";
-// import "slick-carousel/slick/slick-theme.css";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 export default function Autopros() {
 
 
-    // const settings = {
-    //   dots: true,
-    //   infinite: true,
-    //   speed: 500,
-    //   slidesToShow: 1,
-    //   slidesToScroll: 1
-    // };
+    const settings = {
+      dots: false,
+      arrows: false,
+      infinite: true,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      autoplay: true,
+      speed: 1000, // Transition duration between slides
+      autoplaySpeed: 3000, // Duration each slide is displayed
+      cssEase: "linear"
+    };
 
   return (
   <div>
     {/* Header */}
-    <div className="flex flex-col w-full justify-center items-center bg-white px-6 lg:px-24 pt-36">
+    {/* flex flex-col w-full justify-center items-center bg-white px-6 lg:px-24 pt-36 */}
+    <div className="pt-36 w-screen px-6 lg:px-24">
       <h2 className='page-title lg:px-40'>Boost your shop&apos;s visibility with Vedoc</h2>
       <p className='subtitle-text py-6'>Reach more clients in Houston, Austin and Detroit</p>
       <div className='flex flex-wrap justify-center gap-2 lg:pb-10 py-2 md:py-5 lg:py-0'>
@@ -37,7 +42,7 @@ export default function Autopros() {
         <Link href="#" className=''><div className='google-play-icon'></div></Link>
       </div>
 
-    {/* <Slider {...settings}>
+    <Slider {...settings}>
       <div className='autopros-page-image'>
         <Image src='/images/autopros_01.png' alt='Autopro page image' width={100} height={100} quality={100} unoptimized={true} />
       </div>
@@ -50,7 +55,7 @@ export default function Autopros() {
       <div className='autopros-page-image'>
         <Image src='/images/autopros_04.png' alt='Autopro page image' width={100} height={100} quality={100} unoptimized={true} />
       </div>
-    </Slider> */}
+    </Slider>
 
     </div>
 
