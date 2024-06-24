@@ -12,7 +12,7 @@ const Accordion = ({ title, content }) => {
         onClick={() => setIsOpen(!isOpen)}
       >
         <div className="flex justify-between items-center">
-          <span className="text-lg font-medium">{title}</span>
+          <span className="text-sm md:text-lg font-medium">{title}</span>
           <span className={`text-lg transition-colors duration-300 ${isOpen ? 'text-white' : 'text-black'}`}>
             <FontAwesomeIcon icon={isOpen ? faChevronUp : faChevronDown} />
           </span>
@@ -21,7 +21,7 @@ const Accordion = ({ title, content }) => {
       <div className={`overflow-hidden transition-max-height duration-500 ease-in-out ${isOpen ? 'max-h-screen' : 'max-h-0'}`}>
         {isOpen && (
           <div className="p-6 bg-white">
-            <p>{content}</p>
+            <p className='content-text'>{content}</p>
           </div>
         )}
       </div>
