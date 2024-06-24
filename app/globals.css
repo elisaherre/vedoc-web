@@ -38,7 +38,7 @@
   }
 
   .content-text {
-    @apply leading-8 font-light text-sm lg:text-base;
+    @apply leading-8 font-light text-xs md:text-sm lg:text-base;
   }
 
   /* Layout */

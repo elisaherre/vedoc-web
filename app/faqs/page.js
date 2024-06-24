@@ -38,7 +38,7 @@ export default function Faqs() {
       <div className="pt-36 w-screen px-6 lg:px-24">
         <h3 className='intro-title text-center'>FAQs</h3>
         <h2 className='page-title'>Frequently Asked Questions</h2>
-        <p className='subtitle-text pb-16 lg:px-80'>We compiled a list of commonly asked questions to provide you with quick and informative answers.</p>
+        <p className='subtitle-text pb-6 md:pb-16 lg:px-20 xl:px-80'>We compiled a list of commonly asked questions to provide you with quick and informative answers.</p>
       </div>
 
       {/* FAQ */}
@@ -53,8 +53,8 @@ export default function Faqs() {
       {/* Contact */}
       <section className='px-6 lg:px-24 mb-12'>
         <div className='bg-vedoc-light-yellow p-12 flex flex-col items-center justify-center'>
-          <h3 className='font-roboto font-medium text-xl md:text-xl lg:text-4xl py-5 md:py-8'>Still have a question?</h3>
-          <p className='content-text w-1/2 text-center'>Email, or complete the form to ask questions or learn on how Vedoc can solve your autocare problem. Our friendly team would love to hear from you.</p>
+          <h3 className='font-roboto font-medium text-xl md:text-xl lg:text-4xl py-4 md:py-8'>Still have a question?</h3>
+          <p className='content-text lg:w-1/2 text-center'>Email, or complete the form to ask questions or learn on how Vedoc can solve your autocare problem. Our friendly team would love to hear from you.</p>
           <Link href="/contact" className='text-vedoc-black bg-vedoc-yellow hover:bg-vedoc-ad-yellow focus:outline-none focus:ring-gray-400 rounded-lg text-sm px-10 py-2 text-center border border-gray-400 m-5'>Contact Us</Link>
         </div>
       </section>
