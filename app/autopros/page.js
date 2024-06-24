@@ -33,7 +33,6 @@ export default function Autopros() {
   return (
   <div>
     {/* Header */}
-    {/* flex flex-col w-full justify-center items-center bg-white px-6 lg:px-24 pt-36 */}
     <div className="pt-36 w-screen px-6 lg:px-24">
       <h2 className='page-title lg:px-40'>Boost your shop&apos;s visibility with Vedoc</h2>
       <p className='subtitle-text py-6'>Reach more clients in Houston, Austin and Detroit</p>
