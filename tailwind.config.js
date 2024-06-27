@@ -17,6 +17,7 @@ module.exports = {
         "vedoc-black": "#181818",
         "vedoc-ad-yellow": "#FFF1B9",
         "vedoc-light-yellow": "#FFFAE3",
+        "vedoc-gray": "#656565",
       }
     },
   },
