@@ -84,7 +84,7 @@ export default function Early() {
     // Set form as submitted
     setFormSubmitted(true);
 
-    // Handle form submission logic here:
+    // Handle form submission logic here
     console.log('Form submitted:', formData);
   };
 
