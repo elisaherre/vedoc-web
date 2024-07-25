@@ -421,3 +421,14 @@
     }
   }
 }
+
+/* Early Access */
+
+  .hide-navbar-footer .navbar,
+  .hide-navbar-footer .footer {
+    display: none;
+  }
+
+  .early-logo {
+    @apply h-36 w-36;
+  }

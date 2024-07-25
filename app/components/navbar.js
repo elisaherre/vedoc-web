@@ -60,9 +60,10 @@ export default function Navbar() {
         <li>
           <Link href="/faqs" className={pathname === '/faqs' ? 'active' : ''}>FAQs</Link>
         </li>
-        <li>
+        {/* Blog page */}
+        {/* <li>
           <Link href="/blog" className={pathname === '/blog' ? 'active' : ''}>Blog</Link>
-        </li>
+        </li> */}
         <li>
           <Link href="/contact" className={pathname === '/contact' ? 'active' : ''}>Contact Us</Link>
         </li>
@@ -91,9 +92,10 @@ export default function Navbar() {
           <li>
             <Link href="/faqs" className={pathname === '/faqs' ? 'active' : ''}>FAQs</Link>
           </li>
-          <li>
+          {/* blog */}
+          {/* <li>
             <Link href="/blog" className={pathname === '/blog' ? 'active' : ''}>Blog</Link>
-          </li>
+          </li> */}
           <li>
             <Link href="/contact" className={pathname === '/contact' ? 'active' : ''}>Contact Us</Link>
           </li>
