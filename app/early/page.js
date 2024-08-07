@@ -93,21 +93,20 @@ export default function Early() {
   }
 
   return (
-    <div className='flex items-center justify-center min-h-screen'>
-      <div className='text-cente'>
+    <div className='flex items-center justify-center min-h-screen background-early'>
+      <div className='text-center bg-white w-full md:mx-10 md:rounded-lg'>
         {/* Access button screen */}
         <div className='flex flex-col items-center'>
           <div className='w-36'>
-            <Image src='/images/vedoc_logo2.png' alt='Vedoc' width={100} height={100} quality={100} unoptimized={true} className='w-full pt-20 pb-10' />
+            <Image src='/images/vedoc_logo2.png' alt='Vedoc' width={100} height={100} quality={100} unoptimized={true} className='w-full pt-20 pb-5 logo-shadow' />
           </div>
-          {!showForm && !formSubmitted && <p className='main-title h-10 py-48'>{textToShow}</p>}
-          {!showForm && !formSubmitted && <button onClick={handleButtonClick} className='button-md mt-20 mb-10'>Tap here to begin</button>}
+          {!showForm && !formSubmitted && <p className='main-title h-10 py-20'>{textToShow}</p>}
+          {!showForm && !formSubmitted && <button onClick={handleButtonClick} className='button-md mt-20 mb-20'>Tap here to begin</button>}
 
           {/* Form */}
           {showForm && !formSubmitted && (
             <div>
-              <h2 className='section-title text-center'>Sign up with Vedoc</h2>
-              <p className='subtitle-text pb-8'>Become an early user to receive special access to our new beta.</p>
+              <h2 className='font-roboto font-medium text-sm md:text-2xl lg:text-4xl py-5 md:py-12 text-center'>Become an early user to receive <br></br> special access to our new beta.</h2>
 
               <form onSubmit={handleSubmit} className="max-w-lg mx-auto">
                 <div className='md:flex md:justify-between md:gap-3.5'>
@@ -181,8 +180,8 @@ export default function Early() {
                   </select>
                   {errors.service && <p className="text-red-500 text-sm">{errors.service}</p>}
                 </div>
-                <p className="content-text">By submitting the form, you agree to the privacy policy and confirm that the information is stored in a database.</p>
-                <div className="flex justify-center pt-8 pb-10">
+                <p className="font-light text-xs leading-normal">By submitting the form, you agree to the privacy policy and confirm that the information is stored in a database.</p>
+                <div className="flex justify-center pt-8 pb-20">
                   <button type="submit" className="w-full bg-vedoc-gray text-white py-4 rounded-md">Send Message</button>
                 </div>
               </form>
@@ -192,14 +191,17 @@ export default function Early() {
           {/* Thank You Message */}
           {formSubmitted && (
             <div className='flex flex-col items-center'>
+              <div className='gif'>
+                <img src='/images/lettergif.gif' alt='Thank You' width={200} height={200} unoptimized={true} />
+              </div>
               <h2 className='font-roboto font-medium text-xl md:text-xl lg:text-4xl py-5 md:py-8 text-center'>Thank you for joining, {capitalizeFirstLetter(formData.firstName)}!</h2>
               <p className='subtitle-text'>We&apos;ll be in touch very soon 💛</p>
-              <p className='subtitle-text pb-8'>Scan the code below to visit our website.</p>
-              <div className='w-48'>
-                <Image src='/images/code.png' alt='Vedoc' width={100} height={100} quality={100} unoptimized={true} className='w-full py-10' />
+              <p className='subtitle-text pb-4'>Scan the code below to visit our website.</p>
+              <div className='w-36'>
+                <Image src='/images/code.png' alt='Vedoc' width={100} height={100} quality={100} unoptimized={true} className='py-6 w-full' />
               </div>
               <button
-                className='button-md my-10'
+                className='button-md mt-10 mb-20'
                 onClick={() => {
                   setShowForm(false);
                   setFormSubmitted(false);

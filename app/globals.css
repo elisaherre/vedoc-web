@@ -432,3 +432,26 @@
   .early-logo {
     @apply h-36 w-36;
   }
+
+.logo-shadow {
+  filter: drop-shadow(5px 5px 5px #b2b2b2);
+}
+
+.background-early {
+  @apply relative;
+}
+
+.background-early::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/images/car-background.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  filter: blur(8px);
+  z-index: -1;
+}
